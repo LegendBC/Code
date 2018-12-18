@@ -4,6 +4,20 @@
     // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
+        {
+            "name": "Python",
+            "type": "python",
+            "request": "launch",
+            "stopOnEntry": false,
+            //"pythonPath": "C:/Python27/python",
+            "pythonPath": "C:/Program Files (x86)/Microsoft Visual Studio/Shared/Python36_64/python",
+            "program": "${file}",
+            "cwd": "${workspaceRoot}",
+            "env": {},
+            "envFile": "${workspaceRoot}/.env",
+            
+        },
+      
         
         {
             "name": "(gdb) Launch",
