@@ -7,7 +7,7 @@
         {
             "label": "python",
             "type": "shell",
-            "command": "C:/Program Files (x86)/Microsoft Visual Studio/Shared/Python36_64/python",
+            "command": "python",
            /* "args": [
                 "${file}"
             ],
@@ -22,12 +22,59 @@
         {
             "label": "g++",
             "type": "shell",
-            "command": "g++ ${file} -o ${workspaceRoot}/a.exe"
+            //"command": "g++ ${file} -o ${workspaceRoot}/a.exe"
+            "command": "g++",
+           // "args": ["-g","${file}","-o","${fileDirname}/${fileBasenameNoExtension}.exe"],
+            // "problemMatcher": {
+            //     "owner": "cpp",
+            //     "fileLocation": ["relative", "${workspaceRoot}"],
+            //     "pattern": {
+            //         "regexp": "^(.*):(\\d+):(\\d+):\\s+(warning|error):\\s+(.*)$",
+            //         "file": 1,
+            //         "line": 2,
+            //         "column": 3,
+            //         "severity": 4,
+            //         "message": 5
+            //     }
+            // }
+            //"version": "0.1.0",
+            //"command": "g++",
+            "args": ["-g","${file}","-o","${fileDirname}/${fileBasenameNoExtension}.exe"],    // 编译命令参数
+            "problemMatcher": {
+                "owner": "cpp",
+                "fileLocation": ["relative", "${workspaceRoot}"],
+                "pattern": {
+                    "regexp": "^(.*):(\\d+):(\\d+):\\s+(warning|error):\\s+(.*)$",
+                    "file": 1,
+                    "line": 2,
+                    "column": 3,
+                    "severity": 4,
+                    "message": 5
+        }
+    }
+
         },
         {
-            "label": "gcc",
-            "type": "shell",
-            "command": "gcc ${file} -o ${workspaceRoot}/a.exe"
+             "label": "gcc",
+             "type": "shell",
+            // "command": "gcc -g ${file} -o ${workspaceRoot}/a.exe"
+            "command": "gcc",
+            "args": ["-g","${file}","-o","${fileDirname}/${fileBasenameNoExtension}.exe"],
+            "problemMatcher": {
+                "owner": "cpp",
+                "fileLocation": ["relative", "${workspaceRoot}"],
+                "pattern": {
+                    "regexp": "^(.*):(\\d+):(\\d+):\\s+(warning|error):\\s+(.*)$",
+                    "file": 1,
+                    "line": 2,
+                    "column": 3,
+                    "severity": 4,
+                    "message": 5
+                }
+            }
+
+
+
         }
 
 

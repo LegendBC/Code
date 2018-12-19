@@ -20,11 +20,11 @@
       
         
         {
-            "name": "(gdb) Launch",
+            "name": "(gdb) g++Launch",
             "type": "cppdbg",
             "request": "launch",
-            "program": "${workspaceFolder}/a.exe",
-            "args": [],
+            "program": "${fileDirname}/${fileBasenameNoExtension}.exe",
+            "args": ["-g"],
             "stopAtEntry": false,
             "cwd": "${workspaceFolder}",
             "environment": [],
@@ -41,16 +41,19 @@
             ]
         },
         {
-            "name": "(gdb) Launch",
+            "name": "(gdb) gccLaunch",
             "type": "cppdbg",
             "request": "launch",
-            "program": "${workspaceFolder}/a.exe",
-            "args": [],
+            "program": "${fileDirname}/${fileBasenameNoExtension}.exe",
+            "args": ["-g"],
             "stopAtEntry": false,
             "cwd": "${workspaceFolder}",
             "environment": [],
             "externalConsole": true,
             "MIMode": "gdb",
+            //"console": "none",
+            //"outputCapture": "std",
+           // "avoidWindowsConsoleRedirection": false,
             "miDebuggerPath": "C:\\MinGW\\bin\\gdb.exe",
             "preLaunchTask": "gcc",
             "setupCommands": [
