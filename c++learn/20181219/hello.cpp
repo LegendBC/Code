@@ -17,8 +17,8 @@ class lbc{
 };
 
 int main(){
-   //lbc LBC(4,5,6);
-   lbc LBC;
-   LBC(4,5,6);
+   lbc LBC(4,5,6);
+   //lbc LBC;
+   //LBC(4,5,6);
    return 0;
 }
