@@ -1,21 +1,17 @@
+#include <string.h>
 #include <stdio.h>
-#include <stdlib.h>
+using namespace std;
 
-int a[100][100];
-int d[100][100];
-
-
-
-int main()
-{
-    int m,n;
-    scanf("%d %d",&m,&n);
-    for(int i =0;i<m;++i)
-    {
-        for(int j = 0;j<n;++j)
-        {
-            scanf("");
-        }
+int main(){
+    char s[] = "ab:d : ef;gh :i-jkl;mnop;qrs-tu: vwx-y;z";
+    char *delim = ":";
+    char *p;
+    printf("%s ", strtok(s, delim));
+    while((p = strtok(NULL, delim)))
+    {   
+        printf("\n");
+        printf("%s ", p);
+        printf("\n");
     }
     return 0;
 }
