@@ -1,0 +1,1 @@
+        // printf("%d\n",sizeof(s)/sizeof('a'));

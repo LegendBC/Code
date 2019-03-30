@@ -1,3 +1,4 @@
+/*
 #include <string.h>
 #include <stdio.h>
 using namespace std;
@@ -14,4 +15,16 @@ int main(){
         printf("\n");
     }
     return 0;
+}
+*/
+
+#include <iostream>
+using namespace std;
+void test(float &x){
+    x = 1000;
+}
+int main(){
+    float nKByte = 100.0;
+    test(nKByte);
+    cout << nKByte << " megabytes" << endl;
 }
